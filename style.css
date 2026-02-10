@@ -1,0 +1,171 @@
+body {
+    background-color: rgb(107, 219, 188, 0.3);
+}
+
+.loader {
+    position: fixed;
+    top: 50vh;
+    left: 50vw;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    display: none;
+    color: #6bdbbc;
+    font-size: 45px;
+    text-indent: -9999em;
+    overflow: hidden;
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    animation: mltShdSpin 1.7s infinite ease, round 1.7s infinite ease;
+}
+
+.app {
+    max-width: 1440px;
+    padding: 5px 30px;
+}
+
+.inner-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-title {
+    color: #1a3c34;
+}
+
+.add-button {
+    font-size: 18px;
+    color: #ffffff;
+    background-color: #00b894;
+    width: 200px;
+    height: 50px;
+    padding: 5px 15px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.add-button:hover,
+.add-button:focus-visible {
+    background-color: #1dd1a1;
+}
+
+.table {
+    text-align: left;
+    background-color: #1a3c34;
+    width: 100%;
+    border-spacing: 0;
+}
+
+.table th {
+    font-weight: 100;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.table th:not(:last-child):hover,
+.table th:not(:last-child):focus-visible {
+    background-color: #2a4c44;;
+}
+
+.table th:last-child {
+    cursor: default;
+}
+
+.table thead {
+    color: #ffffff;
+}
+
+.table tbody {
+    background-color: #ffffff;
+}
+
+.table td {
+    padding: 10px;
+}
+
+.remove-button {
+    color: #ffffff;
+    background-color: #e74c3c;
+    border: none;
+    border-radius: 12px;
+    width: 100%;
+    padding: 5px 15px;
+    cursor: pointer;
+}
+
+.remove-button:hover,
+.remove-button:focus-visible {
+    background-color: #ff6b6b;
+}
+
+.add-title {
+    text-align: center;
+}
+
+.form {
+    color: #1a3c34;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.text-field {
+    border-radius: 20px;
+    border: none;
+    padding: 12px;
+}
+
+.form .add-button {
+    width: 100%;
+}
+
+@keyframes mltShdSpin {
+    0% {
+        box-shadow: 0 -0.83em 0 -0.4em,
+            0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em,
+            0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+    }
+
+    5%,
+    95% {
+        box-shadow: 0 -0.83em 0 -0.4em,
+            0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em,
+            0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+    }
+
+    10%,
+    59% {
+        box-shadow: 0 -0.83em 0 -0.4em,
+            -0.087em -0.825em 0 -0.42em, -0.173em -0.812em 0 -0.44em,
+            -0.256em -0.789em 0 -0.46em, -0.297em -0.775em 0 -0.477em;
+    }
+
+    20% {
+        box-shadow: 0 -0.83em 0 -0.4em, -0.338em -0.758em 0 -0.42em,
+            -0.555em -0.617em 0 -0.44em, -0.671em -0.488em 0 -0.46em,
+            -0.749em -0.34em 0 -0.477em;
+    }
+
+    38% {
+        box-shadow: 0 -0.83em 0 -0.4em, -0.377em -0.74em 0 -0.42em,
+            -0.645em -0.522em 0 -0.44em, -0.775em -0.297em 0 -0.46em,
+            -0.82em -0.09em 0 -0.477em;
+    }
+
+    100% {
+        box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em,
+            0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+    }
+}
+
+@keyframes round {
+    0% {
+        transform: rotate(0deg)
+    }
+
+    100% {
+        transform: rotate(360deg)
+    }
+}
